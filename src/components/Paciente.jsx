@@ -15,9 +15,13 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
           confirmButtonText: 'Si eliminar'
         }).then((result) => {
           if (result.isConfirmed) {
-            Swal.fire(
-              'Paciente Eliminado',  
-            )
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Paciente Eliminado',
+              showConfirmButton: false,
+              timer: 1000
+            })
           }
         })
         if(respuesta) {
